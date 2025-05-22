@@ -15,13 +15,18 @@
   "type": "commonjs",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "cypress:run": "cypress run",
+    "generate-report": "node ./cypress/cucumber-html-report.js"
   },
   "devDependencies": {
     "cypress": "^14.4.0",
-    "cypress-cucumber-preprocessor": "^4.3.1"
+    "cypress-cucumber-preprocessor": "^4.3.1",
+    "multiple-cucumber-html-reporter": "^3.9.2"
   },
-  "cypress-cucumber-preprocessor":{
+  "cypress-cucumber-preprocessor": {
+    "cucumberJson": {
+      "generate": true
+    },
     "nonGlobalStepDefinitions": true,
     "stepDefinitions": "cypress/e2e/features/"
   }

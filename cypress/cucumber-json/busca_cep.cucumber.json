@@ -1,0 +1,412 @@
+[
+  {
+    "keyword": "Feature",
+    "name": "Busca de cep",
+    "line": 1,
+    "id": "busca-de-cep",
+    "tags": [],
+    "uri": "busca_cep.feature",
+    "elements": [
+      {
+        "id": "busca-de-cep;usuário-preenche-formulário-de-busca-de-cep-sem-preencher-captcha",
+        "keyword": "Scenario",
+        "line": 2,
+        "name": "Usuário preenche formulário de busca de CEP sem preencher CAPTCHA",
+        "tags": [],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 3,
+            "name": "Usuário está na página 'Busca de CEP'",
+            "result": {
+              "status": "passed",
+              "duration": 768000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 4,
+            "name": "usuário preenche campo 'Digite um CEP ou um Endereço'",
+            "result": {
+              "status": "passed",
+              "duration": 308000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 5,
+            "name": "clica no botão 'Buscar'",
+            "result": {
+              "status": "passed",
+              "duration": 102000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 6,
+            "name": "recebe mensagem de aviso 'Preencha o campo Captcha! (texto contido na imagem)'",
+            "result": {
+              "status": "passed",
+              "duration": 11000000
+            }
+          }
+        ]
+      },
+      {
+        "id": "busca-de-cep;usuário-tenta-submeter-formulário-de-busca-de-cep-sem-preencher-captcha-várias-vezes",
+        "keyword": "Scenario",
+        "line": 8,
+        "name": "Usuário tenta submeter formulário de busca de CEP sem preencher CAPTCHA várias vezes",
+        "tags": [],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 9,
+            "name": "Usuário está na página 'Busca de CEP'",
+            "result": {
+              "status": "passed",
+              "duration": 801000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 10,
+            "name": "usuário preenche campo 'Digite um CEP ou um Endereço'",
+            "result": {
+              "status": "passed",
+              "duration": 306000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 11,
+            "name": "clica no botão 'Buscar' por 5 vezes",
+            "result": {
+              "status": "passed",
+              "duration": 467000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 12,
+            "name": "recebe mensagem 'Preencha o campo Captcha! (texto contido na imagem)'",
+            "result": {
+              "status": "passed",
+              "duration": 9000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 13,
+            "name": "bordas de input Captcha se torna vermelho",
+            "result": {
+              "status": "passed",
+              "duration": 5000000
+            }
+          }
+        ]
+      },
+      {
+        "id": "busca-de-cep;lista-de-opções-'esse-cep-é-de:'-deve-conter-no-mínimo-opção-'todos'",
+        "keyword": "Scenario",
+        "line": 15,
+        "name": "Lista de opções 'Esse CEP é de:' deve conter no mínimo opção 'Todos'",
+        "tags": [],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 16,
+            "name": "Usuário está na página 'Busca de CEP'",
+            "result": {
+              "status": "passed",
+              "duration": 813000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 17,
+            "name": "ele seleciona campo de formulário 'Esse CEP é de:'",
+            "result": {
+              "status": "passed",
+              "duration": 4000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 18,
+            "name": "lista deve conter 1 ou mais categorias de buscas",
+            "result": {
+              "status": "passed",
+              "duration": 20000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 19,
+            "name": "categoria selecionada por default deve ser 'Todos'",
+            "result": {
+              "status": "passed",
+              "duration": 6000000
+            }
+          }
+        ]
+      },
+      {
+        "id": "busca-de-cep;pesquisa-de-cep-através-de-api-com-sucesso-(utilizando-fixture)",
+        "keyword": "Scenario",
+        "line": 21,
+        "name": "Pesquisa de CEP através de API com sucesso (utilizando fixture)",
+        "tags": [],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 22,
+            "name": "temos lista de CEPs válidos e bem formatados em um arquivo 'ceps'",
+            "result": {
+              "status": "passed",
+              "duration": 47000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 23,
+            "name": "request GET é enviada utilizando CEPs",
+            "result": {
+              "status": "passed",
+              "duration": 677000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 24,
+            "name": "API retorna json com dados do logradouro",
+            "result": {
+              "status": "passed",
+              "duration": 8000000
+            }
+          }
+        ]
+      },
+      {
+        "id": "busca-de-cep;pesquisa-de-cep-através-de-api-com-falha-por-má-formatação-de-dados-(utilizando-fixture)",
+        "keyword": "Scenario",
+        "line": 26,
+        "name": "Pesquisa de CEP através de API com falha por má formatação de dados (utilizando fixture)",
+        "tags": [],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 27,
+            "name": "temos lista de CEPs mal formatados em um arquivo 'invalid_ceps'",
+            "result": {
+              "status": "passed",
+              "duration": 41000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 28,
+            "name": "request GET é enviada utilizando CEPs com formatação incorreta",
+            "result": {
+              "status": "passed",
+              "duration": 1386000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 29,
+            "name": "API retorna página com \"bad request\"",
+            "result": {
+              "status": "passed",
+              "duration": 14000000
+            }
+          }
+        ]
+      },
+      {
+        "id": "busca-de-cep;pesquisa-de-cep-através-de-api-com-falha-por-dado-não-encontrado(utilizando-fixture)",
+        "keyword": "Scenario",
+        "line": 31,
+        "name": "Pesquisa de CEP através de API com falha por dado não encontrado(utilizando fixture)",
+        "tags": [],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 32,
+            "name": "temos lista de CEPs inválidos em um arquivo 'notFound_ceps'",
+            "result": {
+              "status": "passed",
+              "duration": 41000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 33,
+            "name": "request GET é enviada utilizando CEPs não existentes",
+            "result": {
+              "status": "passed",
+              "duration": 929000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 34,
+            "name": "API retorna json com mensagem de erro",
+            "result": {
+              "status": "passed",
+              "duration": 10000000
+            }
+          }
+        ]
+      },
+      {
+        "id": "busca-de-cep;pesquisa-de-cep-através-de-api-com-sucesso",
+        "keyword": "Scenario",
+        "line": 36,
+        "name": "Pesquisa de CEP através de API com sucesso",
+        "tags": [],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 37,
+            "name": "temos lista de CEPs válidos e bem formatados: 76900-540,79601-200,13349-203",
+            "result": {
+              "status": "passed",
+              "duration": 28000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 38,
+            "name": "request GET é enviada utilizando CEPs em lista",
+            "result": {
+              "status": "passed",
+              "duration": 651000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 39,
+            "name": "API retorna json com dados do logradouro",
+            "result": {
+              "status": "passed",
+              "duration": 6000000
+            }
+          }
+        ]
+      },
+      {
+        "id": "busca-de-cep;pesquisa-de-cep-através-de-api-com-falha-por-má-formatação-de-dados",
+        "keyword": "Scenario",
+        "line": 41,
+        "name": "Pesquisa de CEP através de API com falha por má formatação de dados",
+        "tags": [],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 42,
+            "name": "temos lista de CEPs mal formatados: 76900--540,796010-200,1A3349-203",
+            "result": {
+              "status": "passed",
+              "duration": 31000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 43,
+            "name": "request GET é enviada utilizando CEPs com formatação incorreta",
+            "result": {
+              "status": "passed",
+              "duration": 1088000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 44,
+            "name": "API retorna página com \"bad request\"",
+            "result": {
+              "status": "passed",
+              "duration": 8000000
+            }
+          }
+        ]
+      },
+      {
+        "id": "busca-de-cep;pesquisa-de-cep-através-de-api-com-falha-por-dado-não-encontrado",
+        "keyword": "Scenario",
+        "line": 46,
+        "name": "Pesquisa de CEP através de API com falha por dado não encontrado",
+        "tags": [],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 47,
+            "name": "temos lista de CEPs inválidos: 78962-000,13171-779,13171-778",
+            "result": {
+              "status": "passed",
+              "duration": 48000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 48,
+            "name": "request GET é enviada utilizando CEPs não existentes",
+            "result": {
+              "status": "passed",
+              "duration": 728000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 49,
+            "name": "API retorna json com mensagem de erro",
+            "result": {
+              "status": "passed",
+              "duration": 9000000
+            }
+          }
+        ]
+      }
+    ]
+  }
+]
