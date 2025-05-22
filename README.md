@@ -16,7 +16,9 @@
     * npm run generate-report
     
 ### OBSERVAÇÕES 
-    Para aqueles que desejam quebrar esse lindo teste 😐😱 em alguns cenários utilizei fixture como entrada de dados dos CEPS, existem 3 arquivos com tipos de CEPS especificos para cada cenário e podemos edita-los para mudar o resultado das buscas ou causar comportamentos inesperados.  
+    Para aqueles que desejam quebrar esse lindo teste 😐😱 
+    Em alguns cenários utilizei fixture como entrada de dados dos CEPS, 
+    existem 3 arquivos com tipos de CEPS especificos para cada cenário e podemos edita-los para mudar o resultado das buscas ou causar comportamentos inesperados.  
     
 
 
