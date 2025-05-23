@@ -1,3 +1,28 @@
+## Instruções para execução
+###    1. Após clone local do repositório executar:
+    * npm install
+    
+###    2. Acessar diretório raiz através do terminal e utilizar comandos a seguir:
+
+    Execução dos testes automatizados pelo terminal:
+    * npx cypress run  cypress/e2e/features/busca_cep/busca_cep.feature
+     ou
+    * npx cypress run --spec cypress/e2e/features/**/*.feature 
+
+    Execução dos testes automatizados pelo cypress:
+    * npx cypress open
+     
+    Gerar relatório de teste:
+    OBS: Como pré-requisito para relatório ser gerado teste deve ser executado.
+    * npm run generate-report
+    
+### OBSERVAÇÕES 
+    Para aqueles que desejam quebrar esse lindo teste 😐😱 
+    Em alguns cenários utilizei fixture como entrada de dados dos CEPS, 
+    existem 3 arquivos com tipos de CEPS especificos para cada cenário e podemos edita-los para mudar o resultado das buscas ou causar comportamentos inesperados.  
+    
+
+
 ## Início
 
 Bem vindo ao teste de Quality Assurance da ONErpm!
