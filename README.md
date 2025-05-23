@@ -1,6 +1,6 @@
 ## Instruções para execução
 ###    1. Após clone local do repositório executar:
-    * npm install -y
+    * npm install
     
 ###    2. Acessar diretório raiz através do terminal e utilizar comandos a seguir:
 
