@@ -13,6 +13,7 @@
     * npx cypress open
      
     Gerar relatório de teste:
+    OBS: Como pré-requisito para relatório ser gerado teste deve ser executado.
     * npm run generate-report
     
 ### OBSERVAÇÕES 
