@@ -137,4 +137,7 @@ dist
 
 # Report directory
 cypress/reports
-/cucumber-json
+cypress/cucumber-json
+
+#screenshots
+cypress/screenshots

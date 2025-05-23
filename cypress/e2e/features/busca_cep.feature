@@ -14,7 +14,7 @@ Feature: Busca de cep
 
     Scenario: Lista de opções 'Esse CEP é de:' deve conter no mínimo opção 'Todos'
         Given Usuário está na página 'Busca de CEP'
-        When ele seleciona campo de formulário 'Esse CEP é de:' 
+        When usuário seleciona campo de formulário 'Esse CEP é de:' 
         Then lista deve conter 1 ou mais categorias de buscas
         And categoria selecionada por default deve ser 'Todos'
 
